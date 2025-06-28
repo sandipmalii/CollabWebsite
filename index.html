@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandip Mali | Creator Portfolio</title>
+  <meta name="description" content="Sandip Mali | UGC Creator from India - Skincare, Fashion & Lifestyle content creation with high engagement. Let’s collaborate!">
+  <meta name="keywords" content="Sandip Mali, UGC Creator India, Skincare Influencer, Fashion Content, Lifestyle Vlogs, Instagram Reels, YouTube Shorts">
+  <meta name="author" content="Sandip Mali">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+
+ 
+ <style>
+  /* Global Variables */
+:root {
+  --bg: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  --text: #1a1a1a;
+  --subtext: #555;
+  --accent: #7f5af0;
+  --card: #ffffff;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+/* Navigation */
+nav {
+  background-color: #111;
+  padding: 2px 20px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* LOGO LEFT */
+.logo img {
+  margin-top: 5px;
+  width: 40px;
+  height: auto;
+}
+
+/* CENTER NAV LINKS */
+.nav-middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-middle ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-middle ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-middle ul li a:hover {
+  color: #f39c12;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .nav-middle {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-middle.active {
+    display: flex;
+  }
+
+  .nav-middle ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.logo {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+/* Header */
+header {
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--subtext);
+  margin-top: 10px;
+  max-width: 500px;
+}
+
+header img {
+  width: 260px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  margin-top: 20px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #6942e6;
+}
+
+/* Section */
+section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--subtext);
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.card ul {
+  text-align: left;
+  padding-left: 20px;
+  color: var(--subtext);
+  margin-top: 10px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* About Card */
+.about-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  line-height: 1.8;
+  border: 1px solid #ccc;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: var(--subtext);
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  align-items: start;
+  
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: var(--accent);
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+/* inspired form gumroad website */
+.btn {
+  --bg: #000;
+  --hover-bg: #ff90e8;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.btn:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+}
+
+ </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-left logo">
+      <img src="./Logo/letter-s (2).png" alt="Sandip Mali">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-middle" id="navLinks">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work-sample">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <header id="home">
+    <div>
+      <h1>Sandip Mali</h1>
+      <p>UGC Creator | Travel, Skincare & Lifestyle | Let’s Make Something Great</p>
+      <a href="#contact" class="btn">Work With Me</a>
+    </div>
+  <img src="./long.png" alt="Sandip Mali" loading="lazy" style="width: 350px; border-radius: 12px; box-shadow: 4px 4px 0 #000;" />
+
+  </header>
+
+  <section id="about">
+    <div class="container ">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <p>
+          Hi! I'm <strong>Sandip</strong>, a passionate <strong>UGC (User-Generated Content) Creator</strong> based in India, specializing in <strong>skincare, beauty, and fashion</strong> content.
+        </p>
+        <p>
+          I create relatable, trust-building content for brands — from daily routines and product demos to outfit try-ons and aesthetic unboxings.
+        </p>
+        <p>
+          My goal is to help your brand feel <strong>human, trustworthy, and visually engaging</strong> through short-form, scroll-stopping content.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Audience Stats</h2>
+    <div class="grid ">
+      <div class="card" style="box-shadow: 4px 4px 0 #000;">
+  <h3>2.16K+</h3>
+  <p>YouTube Subscribers</p>
+</div>
+ <div class="card" style="box-shadow: 4px 4px 0 #000;">
+        <h3>1650+</h3>
+        <p>Instagram Followers</p>
+      </div>
+
+    <div class="card" style="box-shadow: 4px 4px 0 #000;">
+        <h3>65%+</h3>
+        <p>Engagement Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What I Offer</h2>
+    <div class="grid">
+    <div class="card" style="border: 2px solid #000;"> 
+  <h3>Niches</h3>
+  <ul>
+    <li>Skincare & Beauty</li>
+    <li>Fashion Styling & Lifestyle</li>
+  </ul>
+</div>
+
+     <div class="card" style="border: 2px solid #000;"> 
+        <h3>Content Types</h3>
+        <ul>
+          <li>Product Demo Videos</li>
+          <li>Skincare Routines</li>
+          <li>Outfit Try-On Reels</li>
+          <li>Unboxing Videos</li>
+          <li>UGC Product Photography</li>
+          <li>Testimonial/Review Videos</li>
+        </ul>
+      </div>
+
+   <div class="card" style="border: 2px solid #000;"> 
+        <h3>Platforms</h3>
+        <ul>
+          <li>YouTube Shorts</li>
+          <li>Instagram Reels</li>
+          <li>TikTok Style Videos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-sample">
+    <h2>Sample Work</h2>
+    <div class="card-wrapper">
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/79/88/b0/7988b04d2659356ba7a65ec82a7fe368.jpg" alt="Outfit Review">
+        <h3><a href="#">Outfit Review</a></h3>
+        <p>Dress combination, looks and feels good.</p>
+        <a href="./vid/outfit.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/54/b7/0b/54b70b5b9f3d04d1d3d09dff53cab884.jpg" alt="Perfume">
+        <h3><a href="#">Perfume</a></h3>
+        <p>Men's perfume for smelling good and becoming attractive.</p>
+        <a href="./vid/perfume.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/1f/d5/03/1fd503183b5dd3dc4ec7a75cde4ae682.jpg" alt="Stylish T-shirt">
+        <h3><a href="#">Stylish T-shirt</a></h3>
+        <p>T-shirt that helps you level up your style.</p>
+        <a href="./vid/shirt.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/60/5c/53/605c53d2f8c553601c38b23039cd1bf2.jpg" alt="Baggy T-shirt">
+        <h3><a href="#">Baggy T-shirt</a></h3>
+        <p>Baggy fashion clothes are essential for men.</p>
+        <a href="./vid/tshirt.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/01/d4/34/01d434de1cf1d41e60e64431203efc9c.jpg" alt="Men's Serum">
+        <h3><a href="#">Men's Serum</a></h3>
+        <p>Serum that makes you look smarter.</p>
+        <a href="./vid/serum.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+      <ul class="card" style="border: 2px solid #000;">
+        <img src="https://i.pinimg.com/736x/71/d6/8c/71d68c2f357a83c5c1f1fae4e58c3173.jpg" alt="Facewash">
+        <h3><a href="#">Facewash</a></h3>
+        <p>Without cleanser, men's skincare isn't complete.</p>
+        <a href="./vid/facewash.mp4" target="_blank" class="btn">Watch Video</a>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Let’s Collaborate</h2>
+      <div class="about-card" style="margin-top: 40px;">
+        <h3 style="color: var(--text); margin-bottom: 10px;">Contact Me</h3>
+        <p><strong>Email:</strong> <a href="mailto:malisandip021@gmail.com">collabwithsandipmali@gmail.com</a></p>
+        <p><strong>Location:</strong> India</p>
+       <p style="text-align: center; font-weight: bold; padding: 25px; border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.05); backdrop-filter: blur(10px);">
+Ready to collaborate? Feel free to reach out via email!
+</p>
+
+
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <a href="https://www.youtube.com/@dimvlogs2" target="_blank">YouTube</a> |
+      <a href="https://www.instagram.com/sandipmalii/" target="_blank">Instagram</a>
+    </div>
+    <div style="margin-top: 10px;">© 2025 Sandip Mali · All Rights Reserved</div>
+  </footer>
+
+</body>
+</html>
