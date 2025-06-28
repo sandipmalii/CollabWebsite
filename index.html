@@ -62,7 +62,7 @@ nav {
 /* LOGO LEFT */
 .logo img {
   margin-top: 5px;
-  width: 40px;
+  width: 400px;
   height: auto;
 }
 
@@ -368,17 +368,35 @@ ul {
 
 /* Footer */
 footer {
-  background-color: #000;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 4px 20px;
 }
 
 footer a {
-  color: var(--accent);
+  color: rgb(253, 245, 0);
   margin: 0 10px;
   font-weight: 600;
 }
+
+.header-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #000;
+  height: auto;
+}
+
+/* Optional: center on mobile */
+@media (max-width: 768px) {
+  .header-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
 
 /* inspired form gumroad website */
 .btn {
@@ -454,10 +472,11 @@ footer a {
 <body>
 
 <nav>
-  <div class="nav-container">
-    <div class="nav-left logo">
-      <img src="./Logo/letter-s (2).png" alt="Sandip Mali">
-    </div>
+  <div class="nav-left logo">
+  <a href="#home">
+    <img src="./Logo/letter-s (2).png" alt="Sandip Mali" />
+  </a>
+</div>
 
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
@@ -477,11 +496,15 @@ footer a {
 
   <header id="home">
     <div>
-      <h1>Sandip Mali</h1>
-      <p>UGC Creator | Travel, Skincare & Lifestyle | Let’s Make Something Great</p>
-      <a href="#contact" class="btn">Work With Me</a>
+   <h1>Sandip Mali</h1>
+<p>UGC Creator | Skincare, Fashion & Lifestyle</p>
+<p>Helping brands stand out with aesthetic, relatable, and high-converting content.</p>
+
+     <a href="#work-sample" class="btn">View Portfolio</a>
     </div>
-  <img src="./long.png" alt="Sandip Mali" loading="lazy" style="width: 350px; border-radius: 12px; box-shadow: 4px 4px 0 #000;" />
+    <div class="header-image">
+  <img src="./long.png" alt="Sandip Mali" />
+</div>
 
   </header>
 
@@ -489,9 +512,10 @@ footer a {
     <div class="container ">
       <h2>About Me</h2>
       <div class="about-card">
-        <p>
-          Hi! I'm <strong>Sandip</strong>, a passionate <strong>UGC (User-Generated Content) Creator</strong> based in India, specializing in <strong>skincare, beauty, and fashion</strong> content.
-        </p>
+       <p>
+  Hi, I'm <strong>Sandip</strong> — a dedicated <strong>UGC (User-Generated Content) Creator</strong> based in India, specializing in <strong>skincare, beauty, and fashion</strong> content that connects, converts, and builds brand trust.
+</p>
+
         <p>
           I create relatable, trust-building content for brands — from daily routines and product demos to outfit try-ons and aesthetic unboxings.
         </p>
@@ -555,47 +579,55 @@ footer a {
     </div>
   </section>
 
-  <section id="work-sample">
-    <h2>Sample Work</h2>
-    <div class="card-wrapper">
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/79/88/b0/7988b04d2659356ba7a65ec82a7fe368.jpg" alt="Outfit Review">
-        <h3><a href="#">Outfit Review</a></h3>
-        <p>Dress combination, looks and feels good.</p>
-        <a href="./vid/outfit.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/54/b7/0b/54b70b5b9f3d04d1d3d09dff53cab884.jpg" alt="Perfume">
-        <h3><a href="#">Perfume</a></h3>
-        <p>Men's perfume for smelling good and becoming attractive.</p>
-        <a href="./vid/perfume.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/1f/d5/03/1fd503183b5dd3dc4ec7a75cde4ae682.jpg" alt="Stylish T-shirt">
-        <h3><a href="#">Stylish T-shirt</a></h3>
-        <p>T-shirt that helps you level up your style.</p>
-        <a href="./vid/shirt.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/60/5c/53/605c53d2f8c553601c38b23039cd1bf2.jpg" alt="Baggy T-shirt">
-        <h3><a href="#">Baggy T-shirt</a></h3>
-        <p>Baggy fashion clothes are essential for men.</p>
-        <a href="./vid/tshirt.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/01/d4/34/01d434de1cf1d41e60e64431203efc9c.jpg" alt="Men's Serum">
-        <h3><a href="#">Men's Serum</a></h3>
-        <p>Serum that makes you look smarter.</p>
-        <a href="./vid/serum.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-      <ul class="card" style="border: 2px solid #000;">
-        <img src="https://i.pinimg.com/736x/71/d6/8c/71d68c2f357a83c5c1f1fae4e58c3173.jpg" alt="Facewash">
-        <h3><a href="#">Facewash</a></h3>
-        <p>Without cleanser, men's skincare isn't complete.</p>
-        <a href="./vid/facewash.mp4" target="_blank" class="btn">Watch Video</a>
-      </ul>
-    </div>
-  </section>
+<section id="work-sample">
+  <h2>Content Portfolio</h2>
+  <div class="card-wrapper">
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/79/88/b0/7988b04d2659356ba7a65ec82a7fe368.jpg" alt="Outfit Styling">
+      <h3><a href="#">Outfit Styling</a></h3>
+      <p>Minimal styling video featuring casual wear for daily looks.</p>
+      <a href="./vid/outfit.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/54/b7/0b/54b70b5b9f3d04d1d3d09dff53cab884.jpg" alt="Perfume Content">
+      <h3><a href="#">Perfume Feature</a></h3>
+      <p>Showcasing a premium men’s fragrance in a clean aesthetic.</p>
+      <a href="./vid/perfume.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/1f/d5/03/1fd503183b5dd3dc4ec7a75cde4ae682.jpg" alt="T-shirt Content">
+      <h3><a href="#">T-shirt Look</a></h3>
+      <p>Street-style T-shirt content focused on modern casuals.</p>
+      <a href="./vid/shirt.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/60/5c/53/605c53d2f8c553601c38b23039cd1bf2.jpg" alt="Baggy Fit">
+      <h3><a href="#">Baggy Fit</a></h3>
+      <p>Highlighting relaxed streetwear styling with baggy T-shirts.</p>
+      <a href="./vid/tshirt.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/01/d4/34/01d434de1cf1d41e60e64431203efc9c.jpg" alt="Serum Content">
+      <h3><a href="#">Men’s Serum</a></h3>
+      <p>Quick skincare demo showing application and benefits.</p>
+      <a href="./vid/serum.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+    <ul class="card" style="border: 2px solid #000;">
+      <img src="https://i.pinimg.com/736x/71/d6/8c/71d68c2f357a83c5c1f1fae4e58c3173.jpg" alt="Facewash">
+      <h3><a href="#">Facewash Review</a></h3>
+      <p>Basic men’s skincare routine featuring a daily cleanser.</p>
+      <a href="./vid/facewash.mp4" target="_blank" class="btn">Watch Video</a>
+    </ul>
+
+  </div>
+</section>
+
 
   <section id="contact">
     <div class="container">
