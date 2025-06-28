@@ -133,11 +133,49 @@ nav {
 }
 
 
-.logo {
-  font-weight: 800;
-  font-size: 1.6rem;
-  color: var(--text);
+.logo img {
+  max-width: 100%;
+  height: auto;
+  width: 40px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
+
+/* Optional hover effect */
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 32px;
+  }
+}
+
+.contact-email {
+  word-break: break-word;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contact-email a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Slightly smaller on mobile */
+@media (max-width: 480px) {
+  .contact-email {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 /* Header */
 header {
@@ -410,7 +448,7 @@ footer a {
 
  </style>
 
- 
+
 </head>
 
 <body>
@@ -564,7 +602,11 @@ footer a {
       <h2>Get in Touch</h2>
       <div class="about-card" style="margin-top: 40px;">
         <h3 style="color: var(--text); margin-bottom: 10px;">Contact Me</h3>
-        <p><strong>Email:</strong> <a href="mailto:malisandip021@gmail.com">collabwithsandipmali@gmail.com</a></p>
+     <p class="contact-email">
+  <strong>Email:</strong>
+  <a href="mailto:collabwithsandipmali@gmail.com">collabwithsandipmali@gmail.com</a>
+</p>
+
         <p><strong>Location:</strong> India</p>
        <p style="text-align: center; font-weight: bold; padding: 25px; border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,0.05); backdrop-filter: blur(10px);">
 Ready to collaborate? Feel free to reach out via email!
